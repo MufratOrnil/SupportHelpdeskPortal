@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.master.cs"
+    Inherits="SupportHelpdeskPortal.Master.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Support Helpdesk Portal</title>
+    <link href="~/Styles/site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <asp:HyperLink ID="lnkDashboard" runat="server"
+                NavigateUrl="~/Admin/Dashboard.aspx"
+                Text="Dashboard" />
+            <asp:HyperLink ID="lnkTickets" runat="server"
+                NavigateUrl="~/Support/TicketList.aspx"
+                Text="Tickets" />
+
+            <div style="float: right">
+                <asp:LoginView ID="lvUser" runat="server">
+                    <AnonymousTemplate>
+                        <asp:HyperLink ID="lnkLogin" runat="server"
+                            NavigateUrl="~/Account/Login.aspx"
+                            Text="Login" />
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <asp:Label ID="lblUser" runat="server"
+                            Text='<%# "Hello, " + Context.User.Identity.Name %>' />
+                        &nbsp;|&nbsp;
+                <asp:HyperLink ID="lnkProfile" runat="server"
+                    NavigateUrl="~/Account/Profile.aspx"
+                    Text="Profile" />
+                        &nbsp;|&nbsp;
+                <asp:HyperLink ID="lnkLogout" runat="server"
+                    NavigateUrl="~/Account/Logout.aspx"
+                    Text="Logout" />
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>

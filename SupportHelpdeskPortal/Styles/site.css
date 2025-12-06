@@ -1,0 +1,80 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+}
+
+    .navbar a {
+        margin-right: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+.content {
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 6px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"], .aspNetButton, button {
+    padding: 6px 14px;
+    background-color: #007acc;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    .table th, .table td {
+        border: 1px solid #ccc;
+        padding: 5px 8px;
+    }
+
+.profile-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 400px;
+}
+
+.btn-primary {
+    padding: 6px 14px;
+    background-color: #007acc;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-link {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .btn-link:hover {
+        text-decoration: underline;
+    }
